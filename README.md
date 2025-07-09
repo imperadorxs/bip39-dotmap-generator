@@ -3,7 +3,7 @@
 A simple educational tool that converts BIP-39 mnemonic words into their corresponding binary representation — and vice versa.  
 You can also add words to a live list with indexed order display.
 
-![BIP-39 Dotmap Generator Screenshot](.git/screenshot.png)
+![BIP-39 Dotmap Generator Screenshot](./screenshot.png)
 
 > ⚠️ **Security Notice:**  
 > This site is intended for **testing and educational purposes only**.  
