@@ -3,6 +3,7 @@ import { BIP39_WORDLIST } from "./constants/bip39words";
 import { Checkbox } from "./components/ui/checkbox";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
+import { Github } from "lucide-react";
 
 function App() {
   const [bits, setBits] = useState(Array(11).fill(false)); // 11 bits for 2049 words (2^11 = 2048)
@@ -78,8 +79,15 @@ function App() {
       </header>
       <div className="max-w-[800px] mx-auto px-4 mb-8 text-gray-200 text-xs">
         ⚠️ This tool is for learning only. Never enter your actual wallet seed
-        phrase. For your safety, clone the project from GitHub and run it
-        offline on your own machine.
+        phrase. For your safety, clone the{" "}
+        <a
+          href="https://github.com/imperadorxs/bip39-dotmap-generator"
+          target="_blank"
+          className="text-blue-400"
+        >
+          project from GitHub
+        </a>{" "}
+        and run it offline on your own machine.
       </div>
       <div>
         <div className="max-w-[800px] mx-auto px-4">
@@ -150,7 +158,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="max-w-[800px] mx-auto px-4 pb-8 mb-[84px]">
+      <div className="max-w-[800px] mx-auto px-4 pb-8 md-[94px]">
         <h2 className="text-xl font-semibold text-gray-200 mb-4">
           Word List {items.length > 0 && `(${items.length})`}
         </h2>
@@ -190,11 +198,18 @@ function App() {
         )}
       </div>
       <footer className="fixed bottom-0 left-0 w-full border-t border-gray-500 bg-zinc-950">
-        <div className="max-w-[800px] mx-auto px-4 py-8 text-center text-gray-500">
-          <p className="text-sm">
+        <div className="max-w-[800px] mx-auto px-4 py-1 text-center text-gray-500 md:py-4">
+          <p className="text-xs inline-flex items-center flex-col md:flex-row md:text-sm gap-4">
             Made with ❤️ by{" "}
             <a href="https://github.com/imperadorxs" target="_blank">
               imperadorxs 🇧🇷
+            </a>{" "}
+            <a
+              href="https://github.com/imperadorxs/bip39-dotmap-generator"
+              target="_blank"
+              className="text-blue-400 underline whitespace-nowrap gap-2 hidden md:inline-flex text-xs"
+            >
+              Project on GitHub <Github />
             </a>
           </p>
         </div>
